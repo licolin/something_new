@@ -2,7 +2,7 @@
 # Author: li_colin
 
 import pytest
-from src.base_parser import *
+# from src.base_parser import *
 # from src import base_parser
 
 
