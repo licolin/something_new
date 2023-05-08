@@ -138,13 +138,13 @@ def regex_findall_functions(content: Text) -> List[Text]:
 def extract_variables(content: Any) -> Set:
     """extract all variables in content recursively."""
     if isinstance(content, (list, set, tuple)):
-        variables = set()
+        variables: set = set()
         for item in content:
             variables = variables | extract_variables(item)
         return variables
 
     elif isinstance(content, dict):
-        variables = set()
+        variables: set = set()
         for key, value in content.items():
             variables = variables | extract_variables(value)
         return variables
@@ -186,7 +186,7 @@ def parse_function_params(params: Text) -> Dict:
         {'args': [1, 2], 'kwargs': {'a':3, 'b':4}}
 
     """
-    function_meta = {"args": [], "kwargs": {}}
+    function_meta: dict = {"args": [], "kwargs": {}}
 
     params_str = params.strip()
     if params_str == "":
