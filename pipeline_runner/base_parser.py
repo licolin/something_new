@@ -2,10 +2,10 @@
 # Author: li_colin
 
 from loguru import logger
-import re, ast
+import re
+import ast
 from typing import Any, Callable, Dict, List, Set, Text
 from .base_exceptions import *
-import builtins
 
 # use $$ to escape $ notation
 dolloar_regex_compile = re.compile(r"\$\$")
@@ -228,7 +228,6 @@ def get_mapping_variable(
         raise VariableNotFound(
             f"{variable_name} not found in {variables_mapping}"
         )
-
 
 # def get_mapping_function(
 #         function_name: Text, functions_mapping: FunctionsMapping
