@@ -4,7 +4,6 @@
 import yaml
 from loguru import logger
 from typing import Dict, Text
-from base_exceptions import *
 
 
 def _load_yaml_file(yaml_file: Text) -> Dict:
@@ -15,6 +14,6 @@ def _load_yaml_file(yaml_file: Text) -> Dict:
         except yaml.YAMLError as ex:
             err_msg = f"YAMLError:\nfile: {yaml_file}\nerror: {ex}"
             logger.error(err_msg)
-            raise FileFormatError
+            raise ValueError("file format wrong")
 
         return yaml_content
