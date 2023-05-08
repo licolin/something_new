@@ -25,6 +25,8 @@ jobs:
         pip install tox coverage pytest loguru
     - name: Test with pytest
       run: |
+        python setup.py sdist bdist_wheel
+        pip install (Get-ChildItem dist/*.whl)
         pytest
 
 
