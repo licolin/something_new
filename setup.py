@@ -14,7 +14,7 @@ setuptools.setup(
     url="https://github.com/licolin/something_new",
     # packages=setuptools.find_packages("pipeline_runner"),
     packages=["pipeline_runner"],
-    # package_dir={"": "pipeline_runner"},
+    package_dir={"": "something_new"},
     # package_data=package_data,
     classifiers=[
         "Programming Language :: Python :: 3.7",
