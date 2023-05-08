@@ -5,7 +5,6 @@ from loguru import logger
 import re
 import ast
 from typing import Any, Callable, Dict, List, Set, Text
-from .base_exceptions import *
 
 # use $$ to escape $ notation
 dolloar_regex_compile = re.compile(r"\$\$")
