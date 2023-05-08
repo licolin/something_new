@@ -24,7 +24,9 @@ jobs:
         python -m pip install --upgrade pip
         pip install pytest loguru wheel flake8 mypy
     - name: run mypy
-      run: mypy pipeline_runner/
+      run:
+        mypy --install-types
+        mypy pipeline_runner/
     - name: Test with pytest
       run: |
         python setup.py sdist bdist_wheel
