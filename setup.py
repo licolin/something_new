@@ -20,7 +20,7 @@ setuptools.setup(
     # long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/licolin/something_new",
-    packages=setuptools.find_packages("src"),
+    packages=setuptools.find_packages("pipeline_runner"),
     package_dir={"": "src"},
     # package_data=package_data,
     classifiers=[
@@ -38,16 +38,5 @@ setuptools.setup(
         "Topic :: Software Development :: Bug Tracking",
         "Topic :: System :: Logging"
     ],
-    python_requires=">=3.7",
-    install_requires=["objprint>=0.1.3"],
-    extras_require={
-        "full": ["rich", "orjson"]
-    },
-    entry_points={
-        "console_scripts": [
-            "viztracer = viztracer:main",
-            "vizviewer = viztracer:viewer_main",
-            "vdb = viztracer:sim_main"
-        ]
-    },
+    python_requires=">=3.7"
 )
