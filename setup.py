@@ -4,7 +4,7 @@
 import setuptools
 
 setuptools.setup(
-    name="something_new",
+    name="pipeline_runner",
     version="0.0.0",
     author="li colin",
     author_email="li_colin@126.com",
