@@ -21,6 +21,10 @@ jobs:
       run: python -c "import sys;print(sys.version)"
     - name: Install dependencies
       run: |
+        sudo rm -rf /usr/share/dotnet
+        sudo rm -rf /opt/ghc
+        sudo rm -rf "/usr/local/share/boost"
+        sudo rm -rf "$AGENT_TOOLSDIRECTORY"
         python -m pip install --upgrade pip
         pip install pytest loguru
     - name: Test with pytest
