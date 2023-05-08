@@ -2,14 +2,6 @@
 # Author: li_colin
 
 import setuptools
-import sys
-import platform
-
-
-# Determine which attach binary to take into package
-
-
-
 
 setuptools.setup(
     name="something_new",
