@@ -135,6 +135,9 @@ def regex_findall_functions(content: Text) -> List[Text]:
         return []
 
 
+print("xx ", regex_findall_functions("${func(5)}"))
+
+
 def extract_variables(content: Any) -> Set:
     """extract all variables in content recursively."""
     if isinstance(content, (list, set, tuple)):

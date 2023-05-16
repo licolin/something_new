@@ -1,0 +1,9 @@
+#build packages
+wheel
+
+#Lint & Coverage
+mypy
+coverage
+
+#3rd party packages
+loguru
