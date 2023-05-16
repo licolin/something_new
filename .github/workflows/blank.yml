@@ -31,3 +31,14 @@ jobs:
         python setup.py sdist bdist_wheel
         pip install (Get-ChildItem dist/*.whl)
         pytest
+    - name: Generate coverage report
+      run: |
+        coverage run --source pipeline_runner --parallel-mode -m pytest
+        coverage combine
+        coverage xml -i
+      env:
+        COVERAGE_RUN: True
+    - name: Upload report to Codecov
+      uses: codecov/codecov-action@v3
+      with:
+        file: ./coverage.xml
